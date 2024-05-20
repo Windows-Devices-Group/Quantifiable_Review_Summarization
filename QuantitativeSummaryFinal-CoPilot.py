@@ -784,7 +784,6 @@ if device_name:
     data_sorted = data_filtered.sort_values(by='REVIEW_COUNT', ascending=False)
     top_four_aspects = data_sorted.head(4)
     aspects_list = top_four_aspects['ASPECT'].to_list()
-    aspects_list
     formatted_aspects = ', '.join(f"'{aspect}'" for aspect in aspects_list)
     key_df = get_final_df(aspects_list, device)
     b =  key_df.to_dict(orient='records')
