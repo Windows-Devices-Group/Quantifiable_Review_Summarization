@@ -766,7 +766,7 @@ def get_final_df(aspects_list,device):
 # In[60]:
 
 
-st.subheader("Quantifiable Review Summarization")
+st.subheader("Product Consumer Review Summarization Tool")
 device_name = st.text_input("Enter the Product name : ")
 device = device_name
 if device_name:
@@ -788,7 +788,7 @@ if device_name:
     key_df = get_final_df(aspects_list, device)
     b =  key_df.to_dict(orient='records')
     st.write(query_detailed_summary("Summarize reviews of" + device + "for " +  formatted_aspects +  "Aspects which have following "+str(dataframe_as_dict)+ str(b) + "Reviews: ",[]))
-    heat_map = st.checkbox("Do you like to see the Aspect wise sentiment of this Produt?")
+    heat_map = st.checkbox("Would you like to see the Aspect wise sentiment of this Produt?")
     if heat_map:
         st.dataframe(styled_df)
         aspect_names = ['Microsoft Product', 'Interface', 'Code Generation', 'Image Generation', 'Productivity', 'Text Summarization/Generation', 'Connectivity', 'Compatibility', 'Privacy', 'Ease of Use', 'Reliability', 'Price', 'Innovation', 'Customization/Personalization', 'Generic']
